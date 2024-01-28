@@ -1,0 +1,7 @@
+.buttonStyle {
+  color: var(--color-white);
+}
+
+.buttonStyle:hover {
+  color: var(--color-yellow);
+}
