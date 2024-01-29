@@ -1,8 +1,11 @@
 * {
-  --color-green: #284B59;
+  --color-blue: #284B59;
   --color-white: #fff;
   --color-yellow: #F2E7C4;
+  --color-green: #54BF5B;
+  --color-cyan: #06ADBF;
+
 }
 body {
-  background-color: var(--color-green);
+  background-color: var(--color-blue);
 }

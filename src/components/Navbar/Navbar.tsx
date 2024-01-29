@@ -28,7 +28,7 @@ const Navbar = () => {
 
       <ul className='hidden md:flex'>
         {navItems.map(item => (
-          <Button key={item.id} label={item.text} style='font-semibold'/>
+          <Button key={item.id} label={item.text} type='none' />
         ))}
       </ul>
 
@@ -50,6 +50,7 @@ const Navbar = () => {
             key={item.id}
             style={'text-white'}
             label={item.text}
+            type='none'
           />
         ))}
       </ul>

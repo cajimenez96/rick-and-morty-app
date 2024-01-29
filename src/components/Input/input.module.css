@@ -1,0 +1,10 @@
+.inputStyle {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border-bottom: 2px solid var(--color-green);
+  outline: none;
+}
+
+.inputStyle:focus {
+  border-bottom: 2px solid var(--color-cyan);
+}
