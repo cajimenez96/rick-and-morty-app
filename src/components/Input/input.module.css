@@ -6,5 +6,5 @@
 }
 
 .inputStyle:focus {
-  border-bottom: 2px solid var(--color-cyan);
+  border-bottom: 2px solid var(--color-cian);
 }

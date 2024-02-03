@@ -1,26 +1,21 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
-import logo from './assets/Rick_and_Morty_logo.png';
-import Input from './components/Input/Input';
-import Button from './components/Button/Button';
+import Home from './containers/Home/Home';
 
 const App = () => {
 
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <Navbar />
-      <div className='flex flex-col justify-center items-center mt-5'>
-        <img src={logo} width={450} />
-        <div className='mt-10 w-full max-w-2xl'>
-          <div className='flex mx-10'>
-            <Input placeholder='Buscar un personaje' styleProp='mr-10' />
-            <Button type='green' label='Buscar' />
-          </div>
-        </div>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
 export default App;

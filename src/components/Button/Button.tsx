@@ -6,6 +6,7 @@ type ButtonProps = {
   label: string;
   icon?: string;
   style?: string;
+  handleClick?: () => void;
 }
 
 const typesButton = [
@@ -29,10 +30,8 @@ const Button = (props: ButtonProps) => {
 
 
   return (
-    <button
-      className={`w-28 rounded-md px-3 py-2 mx-auto ${typeButton}`}
-    >
-        {props.label}
+    <button className={`w-28 rounded-md px-3 py-2 mx-auto ${typeButton}`} onClick={props.handleClick}>
+      {props.label}
     </button>
   )
 };

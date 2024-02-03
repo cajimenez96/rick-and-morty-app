@@ -3,9 +3,9 @@
   --color-white: #fff;
   --color-yellow: #F2E7C4;
   --color-green: #54BF5B;
-  --color-cyan: #06ADBF;
-
+  --color-cian: #06ADBF;
 }
+
 body {
   background-color: var(--color-blue);
 }
