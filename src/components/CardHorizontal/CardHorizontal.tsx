@@ -1,4 +1,3 @@
-import React from 'react';
 import { Character } from '../../Utils/Interfaces';
 import { FaDna, FaSkullCrossbones, FaTransgender } from 'react-icons/fa6';
 

@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import Axios from '../../api/Axios';
-import { Character, Info } from '../../Utils/Interfaces';
+import { Character } from '../../Utils/Interfaces';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
@@ -10,7 +10,7 @@ import CardHorizontal from '../../components/CardHorizontal/CardHorizontal';
 
 const Home = () => {
   const [allCharacters, setAllCharacters] = useState<Character[]>([]);
-  const [data, setData] = useState<Info>();
+  // const [data, setData] = useState<Info>();
   const [characterSelected, setCharacterSelected] = useState<Character>();
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -23,7 +23,7 @@ const Home = () => {
           throw new Error("Hubo un inconveniente, por favor intenta más tarde.");
         } else {
           setAllCharacters(response.data.results);
-          setData(response.data.info);
+          // setData(response.data.info);
         }
         
       })

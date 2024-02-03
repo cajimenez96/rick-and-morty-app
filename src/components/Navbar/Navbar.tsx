@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import Button from '../Button/Button';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import styles from './navbar.module.css';

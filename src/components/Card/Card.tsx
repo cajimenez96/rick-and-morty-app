@@ -1,4 +1,3 @@
-import React from 'react';
 import { Character } from '../../Utils/Interfaces';
 import { BsFillHeartFill, BsFillHeartbreakFill } from 'react-icons/bs';
 
