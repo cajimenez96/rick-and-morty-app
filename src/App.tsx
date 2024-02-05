@@ -6,14 +6,14 @@ import Home from './containers/Home/Home';
 const App = () => {
 
   return (
-    <div className="w-full">
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <div className="w-full">
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 
