@@ -1,4 +1,4 @@
-import { Character } from '../../Utils/Interfaces';
+import { Character } from '../../utils/Interfaces';
 import { FaDna, FaSkullCrossbones, FaTransgender } from 'react-icons/fa6';
 
 type Props = {
@@ -27,7 +27,7 @@ const CardHorizontal = ({data}: Props) => {
             <FaTransgender className="mr-1" /> {'Gender: ' + data.gender}
           </span>
           <span className="mb-1 flex items-center text-base">
-            <FaDna className="mr-1" /> {'Gender: ' + data.species}
+            <FaDna className="mr-1" /> {'Specie: ' + data.species}
           </span>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Character } from '../../Utils/Interfaces';
+import { Character } from '../../utils/Interfaces';
 import { BsFillHeartFill, BsFillHeartbreakFill } from 'react-icons/bs';
 
 type CardProps = {
@@ -7,6 +7,7 @@ type CardProps = {
 }
 
 const Card = ({data, handleClick}: CardProps) => {
+  
   return (
     <div className="w-42 lg:w-64 m-5 rounded-md shadow-lg bg-cian cursor-pointer hover:shadow-green" onClick={handleClick}>
       <img className="w-full" src={data.image} alt={data.name} />
