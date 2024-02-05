@@ -1,45 +1,26 @@
 import {useEffect, useState} from 'react';
+import { useLocation } from "react-router-dom";
 import Axios from '../../api/Axios';
-import { Character } from '../../Utils/Interfaces';
+import { Character } from '../../utils/Interfaces';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 import logo from '../../assets/Rick_and_Morty_logo.png';
 import Modal from '../../components/Modal/Modal';
 import CardHorizontal from '../../components/CardHorizontal/CardHorizontal';
+import { getAllData } from '../../helper/Helper';
 
 const Home = () => {
+  const pathname = '/character';
   const [allCharacters, setAllCharacters] = useState<Character[]>([]);
-  // const [data, setData] = useState<Info>();
+  const [data, setData] = useState<Info>({});
   const [characterSelected, setCharacterSelected] = useState<Character>();
   const [loading, setLoading] = useState<boolean>(false);
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
   useEffect(() => {
-    const getAllCharacters = async () => {
-      setLoading(true);
-      Axios.get('/character')
-      .then((response) => {
-        if (response.status !== 200) {
-          throw new Error("Hubo un inconveniente, por favor intenta más tarde.");
-        } else {
-          setAllCharacters(response.data.results);
-          // setData(response.data.info);
-        }
-        
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-    }
-
-    getAllCharacters();
-  },[]);
-
-  const [openModal, setOpenModal] = useState<boolean>(false);
-  
+    getAllData(pathname, setAllCharacters, setData, setLoading);
+  },[]);  
 
   return (
     <>
